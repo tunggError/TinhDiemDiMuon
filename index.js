@@ -33,7 +33,7 @@ function getTimee(time, sum) {
         if (minute) {
             sum += (m * Number(minute));
         }
-        return total;
+        return sum;
     }
 }
 
