@@ -23,7 +23,7 @@ function getTimee(time, sum) {
     const h = m * 60;
     sum = 0;
     const arr = time.match(reg);
-
+    
     for (var a of arr) {
         if (arr[0]) {
             n = arr[0];
@@ -33,7 +33,6 @@ function getTimee(time, sum) {
         }
         if (arr[1]) {
             n = arr[1];
-            const key = n.slice(-1);
             let value = parseInt(n.slice(0, -1));
             var sum = total + (m * value)
         }
