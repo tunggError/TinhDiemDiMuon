@@ -40,6 +40,7 @@ function getTimee(time, sum) {
         return sum;
 
     }
+}
 
 const newXlss = data.map(function(item) {
     // console.log(data);
@@ -61,5 +62,3 @@ _.forEach(_.orderBy(newXlss, ['sum'], ['desc']), (item, index) => {
     console.log(index, item);
 });
 
-
-}
