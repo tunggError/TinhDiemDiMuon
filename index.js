@@ -11,7 +11,7 @@ const POINT = {
 
 const data = (xlss.utils.sheet_to_json(file.Sheets[file.SheetNames[0]]));
 
-function getTimee(time, sum) {
+function getTimee(time) {
     if (!time) {
         return 0;
     }
