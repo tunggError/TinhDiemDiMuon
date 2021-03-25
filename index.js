@@ -21,22 +21,20 @@ function getTimee(time, sum) {
     const reg = /(\d+)(h|m)/gi;
     const m = 60;
     const h = m * 60;
-    sum = 0;
-    const arr = time.match(reg);
-    
-        if (arr[0]) {
-            n = arr[0];
-            let value = parseInt(n.slice(0, -1));
-            var total = sum + (h * value)
-
+    const dataTime = time.toString(reg);
+    let total = 0
+    if (dataTime) {
+        n = dataTime
+        const hour = n.replace(/(\d+[^\dh])/gi, "").replace(/h+/gi, "");
+        const minute = n.replace(/(\d+[^\dm])/gi, "").replace(/m+/gi, "");
+        if (hour) {
+            total += (h * Number(hour));
+        };
+        if (minute) {
+            total += (m * Number(minute));
         }
-        if (arr[1]) {
-            n = arr[1];
-            let value = parseInt(n.slice(0, -1));
-            var sum = total + (m * value)
-        }
-        return sum;
-
+        return total;
+    }
 }
 
 const newXlss = data.map(function(item) {
