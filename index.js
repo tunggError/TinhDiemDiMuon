@@ -18,13 +18,12 @@ function getTimee(time, sum) {
     if (/^\d+$/g.test(time)) {
         return parseInt(time);
     }
-    const reg = /(\d+)(\w)/g;
+    const reg = /(\d+)(h|m)/gi;
     const m = 60;
     const h = m * 60;
     sum = 0;
     const arr = time.match(reg);
     
-    for (var a of arr) {
         if (arr[0]) {
             n = arr[0];
             let value = parseInt(n.slice(0, -1));
@@ -38,7 +37,6 @@ function getTimee(time, sum) {
         }
         return sum;
 
-    }
 }
 
 const newXlss = data.map(function(item) {
