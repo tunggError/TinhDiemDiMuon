@@ -23,7 +23,6 @@ function getTimee(time) {
     const h = m * 60;
     const dataTime = time.toString(reg);
     let sum = 0
-    if (dataTime) {
         n = dataTime
         const hour = n.replace(/(\d+[^\dh])/gi, "").replace(/h+/gi, "");
         const minute = n.replace(/(\d+[^\dm])/gi, "").replace(/m+/gi, "");
@@ -34,7 +33,6 @@ function getTimee(time) {
             sum += (m * Number(minute));
         }
         return sum;
-    }
 }
 
 const newXlss = data.map(function(item) {
