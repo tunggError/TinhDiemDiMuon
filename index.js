@@ -22,16 +22,16 @@ function getTimee(time, sum) {
     const m = 60;
     const h = m * 60;
     const dataTime = time.toString(reg);
-    let total = 0
+    let sum = 0
     if (dataTime) {
         n = dataTime
         const hour = n.replace(/(\d+[^\dh])/gi, "").replace(/h+/gi, "");
         const minute = n.replace(/(\d+[^\dm])/gi, "").replace(/m+/gi, "");
         if (hour) {
-            total += (h * Number(hour));
+            sum += (h * Number(hour));
         };
         if (minute) {
-            total += (m * Number(minute));
+            sum += (m * Number(minute));
         }
         return total;
     }
